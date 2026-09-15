@@ -1,0 +1,54 @@
+﻿=== SISTEMA DE VENTAS - BASELINE v0.1.0 (16 SEMANAS) ===
+Cliente registrado: Juan Perez
+Cliente registrado: Maria Lopez
+Cliente registrado: Inversiones Andinas
+Cliente registrado: Lucia Torres
+Cliente registrado: Cliente Bug
+Producto registrado: Laptop
+Producto registrado: Mouse
+Producto registrado: Teclado
+Producto registrado: Monitor
+ERROR: Precio inv�lido
+Venta creada para: Juan Perez
+Producto agregado: Laptop x1
+Producto agregado: Mouse x2
+Venta finalizada. Subtotal: 2600.0 | Descuento: 520.0 | Total a pagar: 2080.0
+Venta creada para: Inversiones Andinas
+Producto agregado: Monitor x1
+Venta finalizada. Subtotal: 900.0 | Descuento: 135.0 | Total a pagar: 765.0
+Venta creada para: Lucia Torres
+Producto agregado: Mouse x2
+Venta finalizada. Subtotal: 100.0 | Descuento: 10.0 | Total a pagar: 90.0
+Venta creada para: Maria Lopez
+Producto agregado: Teclado x0
+Producto agregado: Monitor x1
+Venta finalizada. Subtotal: 900.0 | Descuento: 45.0 | Total a pagar: 855.0
+=== REPORTE DE VENTAS ===
+Venta #1 Cliente: Juan Perez
+- Laptop x 1 = 2500.0
+- Mouse x 2 = 100.0
+SUBTOTAL: 2600.0
+DESCUENTO: 520.0
+TOTAL A PAGAR: 2080.0
+-----------------------------
+Venta #2 Cliente: Inversiones Andinas
+- Monitor x 1 = 900.0
+SUBTOTAL: 900.0
+DESCUENTO: 135.0
+TOTAL A PAGAR: 765.0
+-----------------------------
+Venta #3 Cliente: Lucia Torres
+- Mouse x 2 = 100.0
+SUBTOTAL: 100.0
+DESCUENTO: 10.0
+TOTAL A PAGAR: 90.0
+-----------------------------
+Venta #4 Cliente: Maria Lopez
+- Teclado x 0 = 0.0
+- Monitor x 1 = 900.0
+SUBTOTAL: 900.0
+DESCUENTO: 45.0
+TOTAL A PAGAR: 855.0
+-----------------------------
+TOTAL VENTAS: 4
+=== FIN ===

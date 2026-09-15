@@ -12,6 +12,7 @@ public class VentaService {
     private ClienteService clienteService;
     private ProductoService productoService;
     private VentaRepository ventaRepo;
+    private DescuentoService descuentoService;
 
     private Venta ventaActual;
 
@@ -19,6 +20,7 @@ public class VentaService {
         this.clienteService = clienteService;
         this.productoService = productoService;
         this.ventaRepo = ventaRepo;
+        this.descuentoService = new DescuentoService();
     }
 
     public void crearVenta(String dniCliente) {
@@ -66,10 +68,15 @@ public class VentaService {
             return;
         }
 
+        double subtotal = ventaActual.calcularTotal();
+        double descuento = descuentoService.calcularDescuento(subtotal, ventaActual.getCliente().getTipo());
+        ventaActual.registrarDescuento(descuento);
         ventaActual.finalizar();
         ventaRepo.guardar(ventaActual);
 
-        Console.info("Venta finalizada. Total: " + ventaActual.calcularTotal());
+        Console.info("Venta finalizada. Subtotal: " + subtotal
+                + " | Descuento: " + descuento
+                + " | Total a pagar: " + ventaActual.calcularTotalPagar());
         ventaActual = null;
     }
 

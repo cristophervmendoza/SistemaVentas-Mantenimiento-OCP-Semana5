@@ -26,6 +26,8 @@ public class Main {
         // Datos iniciales
         clienteService.registrarCliente("12345678", "Juan Perez", "VIP");
         clienteService.registrarCliente("87654321", "Maria Lopez", "NORMAL");
+        clienteService.registrarCliente("11223344", "Inversiones Andinas", "EMPRESA");
+        clienteService.registrarCliente("55667788", "Lucia Torres", "ESTUDIANTE");
         clienteService.registrarCliente("ABCD5678", "Cliente Bug", "NORMAL"); // DNI inválido pero pasa por bug
 
         productoService.registrarProducto(1, "Laptop", 2500);
@@ -40,7 +42,17 @@ public class Main {
         ventaService.agregarProductoVenta(2, 2);
         ventaService.finalizarVenta();
 
-        // Venta 2 (bug: cantidad 0 permitida)
+        // Venta 2: estrategia EMPRESA (15 %)
+        ventaService.crearVenta("11223344");
+        ventaService.agregarProductoVenta(4, 1);
+        ventaService.finalizarVenta();
+
+        // Venta 3: estrategia ESTUDIANTE (10 %)
+        ventaService.crearVenta("55667788");
+        ventaService.agregarProductoVenta(2, 2);
+        ventaService.finalizarVenta();
+
+        // Venta 4 (bug: cantidad 0 permitida)
         ventaService.crearVenta("87654321");
         ventaService.agregarProductoVenta(3, 0);
         ventaService.agregarProductoVenta(4, 1);

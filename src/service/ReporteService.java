@@ -32,7 +32,9 @@ public class ReporteService {
                         + " = " + d.calcularSubtotal());
             }
 
-            Console.info("TOTAL: " + v.calcularTotal());
+            Console.info("SUBTOTAL: " + v.calcularTotal());
+            Console.info("DESCUENTO: " + v.getDescuento());
+            Console.info("TOTAL A PAGAR: " + v.calcularTotalPagar());
             Console.info("-----------------------------");
             i++;
         }
